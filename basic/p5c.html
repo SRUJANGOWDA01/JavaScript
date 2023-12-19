@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn {
+            padding: 12px 14px;
+            background: green;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM</h1>
+
+
+    <div id="blk"></div>
+
+    <hr>
+
+    <div id="txt"></div>
+
+    <hr>
+
+    <button onclick="handler()" id="btn">Click Me</button>
+
+    <script>
+        var block = document.getElementById('blk');
+        block.innerHTML = `<h1>Welcome to JavaScript</h1>`;
+
+        document.getElementById('txt').innerText = `<h3>Welcome to header 3</h3>`;
+
+          function handler() {
+            document.getElementById("btn").innerText = `button successfully clicked`;
+            document.getElementById("btn").style.backgroundColor = "orangered";
+          }
+    </script>
+    
+</body>
+</html>

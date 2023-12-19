@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="result(event)" method="post">
+        <div>
+            <label for="name">Name</label>
+            <input type="date" name="fdate" id="fdate" required>
+        </div>
+
+        <div>
+            <input type="submit">
+        </div>
+    </form>
+
+    <script>
+        function read(e) {
+            e.preventDefault(); // avoid page refresh on event submit
+            var x = document.getElementById('fdate').value;
+            console.log('date =', x);
+        }
+    </script>
+</body>
+</html>
