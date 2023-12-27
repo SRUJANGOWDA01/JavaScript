@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <!-- 5,-3,0,-8,3 -->
+    <h1>Find the largest </h1>
+
+    <script>
+        var x = 5;
+        var y = -3;
+        var z = 0;
+        var p = -8;
+        var q = 3;
+
+        
+        if( x>y && x>z && x>p && x>q) {
+            document.write(`<h1> ${x} is the largest number. </h1>`)
+        }
+         else if (y>x && y>z && y>p && y>q) {
+            document.write(`<h1> ${y} is the largest number. </h1>`)
+        }
+         else if( z>x && z>y && z>p && z>q ){
+            document.write(`<h1> ${z} is the largest number. </h1>`)
+        } 
+        else if( p>x && p>y && p>z && p>q) {
+            document.write(`<h1> ${p} is the largest number. </h1>`)
+        } 
+        else {
+            document.write(`<h1> ${q} is the largest number </h1>`)
+        }
+
+
+
+        if( x<y && x<z && x<p && x<q) {
+            document.write(`<h1> ${x} is the smallest number. </h1>`)
+        }
+         else if (y<x && y<z && y<p && y<q) {
+            document.write(`<h1> ${y} is the smallest number. </h1>`)
+        } 
+        else if( z<x && z<y && z<p && z<q ){
+            document.write(`<h1> ${z} is the smallest number. </h1>`)
+        } 
+        else if( p<x && p<y && p<z && p<q) {
+            document.write(`<h1> ${p} is the smallest number. </h1>`)
+        }
+         else {
+            document.write(`<h1> ${q} is the smallest number </h1>`)
+        }
+
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>Operations that return NaN</h1> 
+     
+     <script>
+        console.log(`"b" + 3 =`, "b" + 3); //b3 concat
+        console.log(`"b" + 3 =`, Number("b" + 3)); //NaN
+
+        console.log(`"b" + 3 =`, "b" * 3);//NaN
+        console.log(`"b" + 3 =`, Number("b" * 3));//NaN
+
+        console.log(`Math.floor("a")`, Math.floor("a"));
+        console.log(`Math.ceil("a")`, Math.ceil("a"));
+        console.log(`Math.round("a")`, Math.round("a"));
+        console.log(`Math.sqrt("a")`, Math.sqrt("a"));
+     </script>
+</body>
+</html>

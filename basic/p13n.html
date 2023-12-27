@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>fjf</h2>
+    <button onclick="findArmsStrong()">Find</button>
+    <script>
+   var sum = 0;
+            function findArmsStrong() {
+                
+                var a = prompt("Enter Number?");
+                var x = Number(a);
+                
+                var temp = x;
+
+               /*  while(temp > 0) {
+                    var rem = temp % 10;
+                    console.log('rem =',rem);
+                         sum += rem * rem * rem;
+                    console.log('sum =',sum);
+                        temp = parseInt(temp/10);
+                    console.log('temp =',temp);    
+                } */
+                //armstrong number of upto n length
+                while(temp > 0) {
+                    let rem = temp % 10;
+                    sum += rem ** a.length;
+                    temp = parseInt(temp / 10);
+                }
+
+                if(sum === x) {
+                    document.write(`<h2> ${ sum } is an armstrong number </h2>`);
+                }else {
+                        document.write(`<h2> ${ sum } is not an armstrong number <h2>`);
+                    }
+                }
+            
+        
+    </script>
+</body>
+</html>

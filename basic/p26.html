@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>NaN => Not a Number</h3>
+    
+
+    <script>
+        var a = "12a3";
+
+        document.write(`<h3> ${ a } </h3>`);
+        document.write(`<h3> NaN = ${ Number(a) } </h3>`);/* NaN */
+        document.write(`<h3> return number =${ parseInt(a)}</h3>`);/* 12 */
+
+        // isNaN(num) => false ,other than number => true
+        //all are not a numbers
+
+        document.write(`<h3> isNaN(12a4) = ${ isNaN("12a4")} </h3>`);//true
+        document.write(`<h3> isNaN("2021/2/5") = ${ isNaN("2021/2/5")} </h3>`);//true
+        document.write(`<h3> isNaN(0/0) = ${ isNaN(0/0)} </h3>`);//true
+        document.write(`<h3> isNaN("10$") = ${ isNaN("10$")} </h3>`);//true
+        document.write(`<h3> isNaN(undefined) = ${ isNaN(undefined)} </h3>`); //true
+        document.write(`<h3> isNaN(function(){}) = ${ isNaN(function(){})} </h3>`);//true
+        document.write(`<h3> isNaN({}) = ${ isNaN({})} </h3>`); //true
+        document.write(`<h3> isNaN([1,2]) = ${ isNaN([1,2])} </h3>`); //true
+      
+         //all are numbers
+        document.write(`<h3> isNaN("") = ${ isNaN("") } </h3>`);//false
+        document.write(`<h3> isNaN(124) = ${ isNaN(124) } </h3>`);//false
+        document.write(`<h3> isNaN(Infinity) = ${ isNaN(Infinity) } </h3>`);//false => Infinity is a number
+        document.write(`<h3> isNaN(-2e-4) = ${ isNaN(-2e-4)} </h3>`);//false = number
+        document.write(`<h3> isNaN(true) = ${ isNaN(true)} </h3>`);//false
+        document.write(`<h3> isNaN(false) = ${ isNaN(false)} </h3>`);//false
+        document.write(`<h3> isNaN(null) = ${ isNaN(null)} </h3>`);//false
+        document.write(`<h3> isNaN(newDate()) = ${ isNaN(newDate())} </h3>`);//false
+
+    </script>
+</body>
+</html>

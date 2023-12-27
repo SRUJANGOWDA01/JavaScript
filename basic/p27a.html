@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Type of null and undefined</h1>
+
+    <script>
+        console.log(`typeof null =`, typeof null); //object
+        console.log(`typeof undefined =`, typeof undefined); //undefined
+
+        // a variable when it is declared but not assigned any value
+        let x;
+        console.log(`x =`, typeof x); //undefined
+
+        //accessing  the value of a property that doesn't exist in object
+        var user = {
+            name: 'John'
+        };
+        console.log(`email =`, user.email);
+
+        //the return value of a function that doesn't return a value
+        function sum(){
+            return;
+        }
+        console.log(`sum()=`, sum());
+
+
+        //the value of a function argument that is declared but has been omitted from the function call
+        function getNum(num) {
+            console.log(`is undefined =`, num);
+        }
+        getNum(10);
+        getNum();
+    </script>
+</body>
+</html>
