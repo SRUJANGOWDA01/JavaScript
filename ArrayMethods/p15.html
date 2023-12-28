@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>come()</h1>
+    // some() method checks if some of the array elements pass the given test function
+
+    <script>
+        function checkAdult(age) {
+              return age <= 18;
+        };
+
+        let ageGroup = [18,21,1,1,51,18,21,5,18,7,10];
+
+        let check = ageGroup.some(checkAdult);
+
+        console.log(`check =`, check); //condition is true
+
+        let ages = [19,20,34,19,34,19];
+
+        console.log(`ages some`, ages.some(checkAdult)); //false
+    </script>
+</body>
+</html>

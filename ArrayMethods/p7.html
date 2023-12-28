@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Reduce()</h1>
+
+    <script>
+        //the reduce() method applies function against an accumulator and each of value the array (from left to right)to reduce it to single value
+
+        var num = [10,20,30,40];
+
+        var res = num.reduce(function(a,b){
+            return a * b;
+        });
+
+        console.log(`res =`,res);
+
+        var res1 = num.reduce(function(a,b){
+            console.log(`a =`,a,`b =`,b);
+               if(a > b) {
+                return a + b;
+               } else {
+                return b + a ;
+               }
+        });
+
+        console.log(`res1=`,res1)
+
+
+        /* 
+        array.reduce(function(accumulator,current){
+            return accumulator + current;
+        }, initial value); */
+    </script>
+</body>
+</html>

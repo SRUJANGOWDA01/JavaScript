@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sorting the array of users based on age</h1>
+    <script>
+        var people = [
+            { name: "John", age: 21},
+            { name: "mike", age: 23},
+            { name: "patric", age: 55},
+            { name: "oliver", age: 55},
+            { name: "kevin", age: 19},
+            { name: "smith", age: 21},
+            { name: "cavis", age: 23},
+            { name: "wilson", age: 55},
+        ];
+
+
+        function groupBy(arr,prop) {
+            return arr.reduce(function(ac,cu){
+                //console.log(`ac`,ac);
+                //console.log(`cu`,cu);
+                let val = cu[prop];
+                //console.log(`val =`,val);
+                if(!ac[val]){
+                    ac[val] = []
+                };
+                ac[val].push(cu);
+                console.log(`ac res`,ac);
+                return ac;
+            }, {})
+        }
+
+        var res = groupBy(people,"age");
+        console.log(`res =`,res);
+    </script>
+</body>
+</html>

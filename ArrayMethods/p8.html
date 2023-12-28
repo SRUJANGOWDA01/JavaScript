@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Removing duplicates from an array using reduce</h1>
+
+    <script>
+        let ageGroup = [18, 21, 1, 1, 51, 18, 21, 5, 18, 7, 10];
+
+        let res = ageGroup.reduce(function(ac,cu){
+            console.log(`ac =`,ac);
+            //console.log(`cu =`, cu);
+         if(ac.indexOf(cu) === -1){
+            ac.push(cu);
+            console.log(`res ac =`,ac);
+         }   
+         return ac;
+        },  []);
+
+        console.log(`res =`,res);
+    </script>
+</body>
+</html>
