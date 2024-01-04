@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+        #blk {
+            width: 100vw;
+            height: 400px;
+            background-color: teal;
+            color: #fff;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section id="blk"></section>
+    <button onclick="addContent()">Add Block</button>
+
+    <script>
+        function addContent() {
+            var content = `<div>
+                <h1>Welcome to JS</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur earum hic dolore nesciunt dignissimos quo minima ut labore? Culpa architecto veniam sed labore expedita ex excepturi deleniti quod dolorem natus.</p>
+                <button onclick="removeContent()">Remove Block </buton>
+                    </div>`;
+
+                    document.getElementById('blk').innerHTML = content;
+        }
+
+        function removeContent() {
+            document.getElementById("blk").innerHTML = "";
+        }
+    </script>
+</body>
+</html>
