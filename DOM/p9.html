@@ -4,6 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        section {
+            display: flex;
+        }
+        div {
+            margin-right: 20px;
+        }
+        label,button {
+            display: block;
+            margin: 10px;
+        }
+        .btn {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+        }
+        select {
+            width: 200px;
+            height: 230px;
+        }
+    </style>
 </head>
 <body>
     <h1>replaceChildren</h1>
@@ -46,6 +67,26 @@
         var yesSel = document.getElementById("yes"); //select2
 
         var yesBtn = document.getElementById("to-yes"); //add btn
+        var noBtn = document.getElementById("to-no"); //remove btn
+
+        //adding items to empty select
+        yesBtn.addEventListener('click', function(){
+            let selOpt = document.querySelectorAll('#no option:checked');
+            console.log('select',selOpt);
+            let existOpt = document.querySelectorAll('#yes option');
+            yesSel.replaceChildren(...selOpt, ...existOpt);// ... spread operator
+        });
+
+
+        //removing items from select
+        noBtn.addEventListener('click',function(){
+            let selOpt = document.querySelectorAll('#yes option:checked');
+            let existOpt = document.querySelectorAll('#no option');
+            noSel.replaceChildren(...selOpt, ...existOpt);
+
+            /* ... spread -> operator Array to parameter */
+        });
+        /* yesBtn.onclick = function(){} */
     </script>
 </body>
 </html>
