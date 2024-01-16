@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Window Object</h3>
+    <button onclick="alertHandler()">alert</button>
+    <button onclick="promptHandler()">prompt</button>
+    <button onclick="confirmHanler()">Confirm</button>
+
+    <script>
+        /* alert,prompt,confirm,open,close => BOM .(Browser Object Model) */
+        function alertHandler() {
+            window.alert("alert message");
+        }
+
+        function promptHandler() {
+            var a = window.prompt("Enter your name?");
+            alert(`My name is ${ a }`);
+        }
+
+        function confirmHanler() {
+            var x = window.confirm("Are you sure to delete a file?");
+            /* ok-> true, cancel -> false */
+            if(x) {
+                alert("file deleted successfully");
+            } else {
+                alert("Oops!.. sorry file delete terminated");
+            }
+        }
+
+
+       /*    window.alert => message
+          window.prompt => accepting user Input
+          window.confirm => user confirmation
+          window.open => to open new tab or new window
+          window.close => used to close open tab/window
+          window.location.href => redirect to specific path
+          window.location.reload => to refresh the page
+
+           */
+    </script>
+</body>
+</html>
