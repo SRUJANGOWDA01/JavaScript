@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Object methods or Object Properties</h3>
+
+    <script>
+        //Object Constructor
+
+        const user = {
+            name: "Raj",
+            email: "raj@gamil.com",
+            mobile: "9966884455",
+            age : 25
+        };
+
+        var user2 = user; // assignment
+        console.log(`user2 = `, user2);
+
+        console.log('user =', user);
+        document.write('user =' + user); // [object, object]
+        document.write('<h1>user name =' + user.name + "</h1>");
+
+        //Object.create -> copy or clone one object prototype in another variable
+        const use1 = Object.create(user);
+
+        console.log('user1 = ',user1);
+
+        document.write('<h1>user name (user1) = ' + user1.name + "</h1>");
+
+</script>
+</body>
+</html>
