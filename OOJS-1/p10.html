@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h2>Object.key()</h2>
+        <script>
+            const user = {
+            name: "raj",
+            email: "raj@gmail.com",
+            mobile: "883752858",
+            age: 56
+            };
+
+            console.log('key =',Object.key(user));
+
+            for(let item of Object.keys(user)) {
+                document.write(`<h3> ${item} </h3>`);
+            }
+        </script>
+</body>
+</html>
