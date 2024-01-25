@@ -6,27 +6,34 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- <h3> static method inside class </h3> -->
+
     <script>
-        class Sum {
-            constructor(x,y) {
-                this.a = x;
-                this.b = y;
+        class Course {
+            constructor(title,dur) {
+                document.write(`<h3> constructor called </h3>`);
+                this.title = title;
+                this.duration = dur;
+            }
+            // static method
+            static print(val) {
+                //will not allow this pointer
+                //static function call possible only by class name
+                document.write(`<h1> this is static method </h1>`);
+                document.write(`<h1> Property Title = ${ this.title} </h1>`);
+                document.write(`<h1> Parameter Title = ${ val } </h1>`);
             }
 
-            calculate() {
-                return this.a + this.b;
+            //non static
+            courseInfo() {
+                document.write(`<h3> ${this.title} ${this.duration} </h3>`);
             }
         }
 
-        // instance is persmission to access the properties of class and constructor
-        // type name = new Class(params) -> syntax
-        let s = new Sum(12,44);
-        let s1 = new Sum(22,43);
+        Course.print("Be-Practical"); // parameterised static method call
 
-        console.log('s =', s);
-        console.log('s1 = ', s1);
-
-        document.write(`<h3> Sum = `)
+        let x = new Course("JavaScript","1month");
+             x.courseInfo(); // method call w.r to instance
     </script>
 </body>
-</html>
+</html>>

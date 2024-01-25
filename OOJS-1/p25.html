@@ -6,44 +6,29 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Finding Even or Odd using Class</h1>
-    <form onsubmit="submitHandler(event)" name="myForm">
-        <div class="input">
-            <label for="num">Enter Number</label>
-            <input type="number" name="num" id="num" required>
-        </div>
-        <div class="input">
-            <button type="submit" class="btn">Submit</button>
-        </div>
-    </form>
-    <hr>
-    <div id="result"></div>
+    <h3>Static Method</h3>
+
 
     <script>
-        function submitHandler(event) {
-            event.preventDefault();  /* to avoid page refresh */
-        let num = Number(document.getElementById('num').value);  // id
-           // document.querySelector('#num').value       // #id, .class, tag
-            //  document.myForm.num.value  (document.formName.inputName.value)
 
-            let x1 = new EvenOdd(num);
-            document.getElementById('result').innerHTML = `<h1> ${ x1.find() } </h1>`;
-        }
-
-        class EvenOdd {
-            constructor(val) {  // param
-                this.num = val;  // prop
+        class Person {
+            //properties & methods
+            constructor() {
+                document.write('hi in a constructor');
+                this.name = "Mahesh";
+                this.display = () => {}
             }
 
-            // method
-            find() {
-                if(this.num % 2 === 0) {
-                    return `${this.num} is even`;
-                } else {
-                    return `${this.num} is odd`;
-                }
+            static getName(na) {
+                //this pointer is inactive inside the  static methods
+                document.write('<h1> hi ' + this.name + 'welcome to js </h1>');
+                document.write('<h1> hi '+ new Person().name + 'welcome to js </h1>' );
             }
         }
+        //classname.methodname
+        Person.getName("Raju");
+
+        
     </script>
 </body>
 </html>
